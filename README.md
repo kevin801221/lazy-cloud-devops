@@ -235,6 +235,22 @@ lazy-cloud-devops/
 
 ---
 
+## 🙏 致謝與靈感來源
+
+這個 plugin 站在巨人的肩膀上。本專案的程式碼為原創撰寫，但**核心哲學與機制明確受以下專案啟發**，在此誠實致謝：
+
+| 專案 | 致謝什麼 |
+| --- | --- |
+| 🦥 **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)**（MIT） | 「馬尾哥 / 最懶資深工程師」這套極簡哲學的**原始出處**。`skills/ponytail-guard.md` 的「垃圾碼測試」決策階梯、原生優先、「少寫程式才是最高級整潔」等核心理念，皆為其 decision-ladder 哲學的再表述。**強烈建議去點顆星。** |
+| 🦸 **[obra/superpowers](https://github.com/obra/superpowers)**（Jesse Vincent / Prime Radiant） | skill-driven 方法論與 **SessionStart context injection** 機制的啟發來源——本 plugin 的 `hooks/inject-ponytail.sh` 自動注入規則書，正是同一個技巧。 |
+| 🔌 **[modelcontextprotocol/server-postgres](https://github.com/modelcontextprotocol/servers)** | 實際接入使用的官方 Postgres MCP 伺服器。 |
+| 🐳 **[ckreiling/mcp-server-docker](https://github.com/ckreiling/mcp-server-docker)** | 實際接入使用的 Docker MCP 伺服器（透過 `uvx` 啟動）。 |
+| 🤖 **[Claude Code](https://docs.claude.com/en/docs/claude-code)** by Anthropic | 承載這一切的 plugin 平台。 |
+
+> 「致謝」與「複製」是兩回事：本 repo 的每個檔案都是依需求原創撰寫，但**哲學的功勞屬於 ponytail，方法論的功勞屬於 superpowers。** 站在巨人肩膀上，記得說聲謝謝。
+
+---
+
 ## 🤝 一起共建
 
 歡迎來「檢舉垃圾碼」。如果你發現這個 plugin 漏放了哪段肥肉進來，

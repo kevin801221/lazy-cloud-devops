@@ -9,6 +9,11 @@ description: Use when writing, reviewing, scaffolding, containerizing, or deploy
 > pay for anything they don't have to. The ponytail isn't a hairstyle — it's
 > a philosophy. Tie back the noise. Ship the signal."
 
+> **Inspired by [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) (MIT).**
+> This rulebook is an original re-expression of the Ponytail "laziest senior
+> developer" decision-ladder philosophy, extended with concrete frontend,
+> database, container, and cloud rules. Credit for the core philosophy is theirs.
+
 This skill is a **rigid** rulebook. Follow it exactly. It exists to kill
 **AI Slop** — the reflexive over-generation of redundant code, bloated
 dependency trees, speculative abstractions, and over-permissioned cloud
