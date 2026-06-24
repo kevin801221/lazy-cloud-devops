@@ -1,0 +1,48 @@
+{
+  "name": "lazy-cloud-devops",
+  "version": "1.0.0",
+  "description": "🦥 Ponytail / Lazy Senior Engineer Mode — eradicate AI Slop and ship ultra-minimalist, container-optimized full-stack apps to AWS & GCP with a single command.",
+  "author": {
+    "name": "kevin801221",
+    "url": "https://github.com/kevin801221"
+  },
+  "homepage": "https://github.com/kevin801221/lazy-cloud-devops",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevin801221/lazy-cloud-devops.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "devops",
+    "minimalism",
+    "ai-slop",
+    "clean-architecture",
+    "aws",
+    "gcp",
+    "docker",
+    "cloud-run",
+    "ecs",
+    "ponytail"
+  ],
+  "skills": "./skills",
+  "commands": "./commands",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": {
+    "docker": {
+      "command": "uvx",
+      "args": ["mcp-server-docker"],
+      "env": {}
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "${POSTGRES_CONNECTION_STRING}"
+      ],
+      "env": {}
+    }
+  }
+}
