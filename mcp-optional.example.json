@@ -1,0 +1,49 @@
+{
+  "_README": "可選的 B 級 MCP（需要憑證/設定，預設不啟用，避免一裝就噴錯）。要啟用某個 server，把它的區塊複製到你的 ~/.claude.json 或專案 .mcp.json 的 mcpServers 下，填好憑證後重啟 Claude Code。執行 /superstack-doctor 可自動掃描你目前具備哪些憑證、能開哪些。",
+  "mcpServers": {
+    "mongodb": {
+      "_doc": "MongoDB 官方 MCP。需要連線字串。Apache-2.0 · mongodb-js/mongodb-mcp-server",
+      "command": "npx",
+      "args": ["-y", "mongodb-mcp-server"],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb+srv://<user>:<pass>@<cluster>/<db>"
+      }
+    },
+    "postgres": {
+      "_doc": "Postgres MCP Pro（含 index tuning / EXPLAIN / health）。需 DATABASE_URI。MIT · crystaldba/postgres-mcp。取代已 archived 且有 SQLi 漏洞的官方 server-postgres。",
+      "command": "uvx",
+      "args": ["postgres-mcp", "--access-mode=restricted"],
+      "env": {
+        "DATABASE_URI": "postgresql://<user>:<pass>@<host>:5432/<db>"
+      }
+    },
+    "aws": {
+      "_doc": "AWS API MCP（覆蓋 AWS CLI）。使用標準 AWS 憑證鏈（~/.aws 或環境變數）。Apache-2.0 · awslabs/mcp",
+      "command": "uvx",
+      "args": ["awslabs.aws-api-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "ap-northeast-1"
+      }
+    },
+    "terraform": {
+      "_doc": "Terraform MCP（IaC）。需本機 docker。MIT · hashicorp/terraform-mcp-server",
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server"],
+      "env": {}
+    },
+    "github": {
+      "_doc": "GitHub 官方 MCP（issue/PR/project board/Actions）。需 PAT 與本機 docker。MIT · github/github-mcp-server",
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_xxx"
+      }
+    },
+    "shadcn": {
+      "_doc": "shadcn 官方 registry MCP（正確安裝元件）。需專案內有 components.json。MIT · ui.shadcn.com",
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"],
+      "env": {}
+    }
+  }
+}

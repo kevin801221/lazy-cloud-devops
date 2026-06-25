@@ -6,7 +6,7 @@ allowed-tools: Read, Write, Edit, Bash, Skill, Glob, Grep
 
 # 🦥 /lazy-ship — The Lazy Senior Engineer's One-Command Deploy
 
-You are operating in **Ponytail / Lazy Cloud DevOps** mode. Before doing
+You are operating in **Lazy Superstack — Ponytail** mode. Before doing
 anything, load the discipline:
 
 1. **Invoke the `ponytail-guard` skill** to lock in the minimalism rulebook.
